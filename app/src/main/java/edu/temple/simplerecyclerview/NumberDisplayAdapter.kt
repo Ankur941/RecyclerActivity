@@ -35,23 +35,23 @@ import androidx.recyclerview.widget.RecyclerView
 class NumberDisplayAdapter(private val numbers: List<Int>) :
     RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>() {
 
-    // ViewHolder: wraps a TextView
+
     class NumberViewHolder(val textView: TextView) : RecyclerView.ViewHolder(textView)
 
-    // Step 3b-1: Create new views (invoked by LayoutManager)
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
         val textView = LayoutInflater.from(parent.context)
             .inflate(android.R.layout.simple_list_item_1, parent, false) as TextView
         return NumberViewHolder(textView)
     }
 
-    // Step 3b-2: Bind the data (called for each item)
+
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
         val number = numbers[position]
         holder.textView.text = "Number $number"
         holder.textView.textSize = (12 + number).toFloat() // 👈 makes font grow
     }
 
-    // Step 3b-3: Return item count
+
     override fun getItemCount(): Int = numbers.size
 }
