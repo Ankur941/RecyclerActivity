@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         //TODO Step 4: Provide a RecyclerView.Adapter
-        val fontSizes = (12..40 step 2).toList()
+        val fontSizes = (1..40 step 2).toList()
         recyclerView.adapter = NumberDisplayAdapter(fontSizes)
+        recyclerView.layoutManager = LinearLayoutManager(this)
     } }// <--- ADD THIS CLOSING BRACE
 
 /*class MyRecyclerViewAdapter(private val items: Array<String>) : RecyclerView.Adapter<MyRecyclerViewAdapter.MyViewHolder>() {

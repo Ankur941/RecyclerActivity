@@ -48,8 +48,8 @@ class NumberDisplayAdapter(private val numbers: List<Int>) :
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
         val number = numbers[position]
-        holder.textView.text = "Number $number"
-        holder.textView.textSize = (12 + number).toFloat() // 👈 makes font grow
+        holder.textView.text = "Font  $number"
+        holder.textView.textSize = (12 + number).toFloat()
     }
 
 
